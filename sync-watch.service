@@ -1,0 +1,15 @@
+[Unit]
+Description=Sync service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/burak/Desktop/examplefolder/app/rsync.sh
+Restart=always
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/home/burak/Desktop/examplefolder/app/
+
+[Install]
+WantedBy=multi-user.target
+
+
